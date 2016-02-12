@@ -1,6 +1,16 @@
 # osx-cli ![License badge][license-img]
 
-Change location and format of screen shot.
+# Homebrew
+
+http://brew.sh/
+
+```bash
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+# Screen capture
+
+Change location and format of screen capture.
 
 ```bash
 > defaults write com.apple.screencapture location ~/Pictures/
