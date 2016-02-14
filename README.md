@@ -1,11 +1,25 @@
 # osx-cli ![License badge][license-img]
 
+# Disks & Volumes
+
+```bash
+$ man pmset
+```
+
+## Disable Sudden Motion Sensor (SMS) for SSD
+
+Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia")) article to understand SMS.
+
+```bash
+$ pmset -a sms 0
+```
+
 # Software Update
 
 ## List and install all available software updates
 
 ```bash
-$ softwareupdate --help
+$ man softwareupdate
 $ softwareupdate --list
 $ softwareupdate --install --all
 ```
@@ -19,7 +33,7 @@ $ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Spotlight
 
 ```bash
-$ mdutil --help
+$ man mdutil
 $ mdutil -i off -d /path/to/volume
 $ mdutil -i on /path/to/volume
 ```
@@ -42,6 +56,8 @@ $ defaults write com.apple.screencapture location ~/Pictures/
 $ defaults write com.apple.screencapture type png
 $ killall SystemUIServer
 ```
+
+
 
 ```
     ╚⊙ ⊙╝
