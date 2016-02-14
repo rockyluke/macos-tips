@@ -105,5 +105,5 @@ $ diskutil eject /dev/diskN
 ```
 
 [license-img]: https://img.shields.io/badge/license-ISC-blue.svg
-[10-10-img]: https://img.shields.io/badge/osx-10.10-blue.svg
-[10-11-img]: https://img.shields.io/badge/osx-10.11-blue.svg
+[10-10-img]: https://img.shields.io/badge/osx-10.10-green.svg
+[10-11-img]: https://img.shields.io/badge/osx-10.11-green.svg
