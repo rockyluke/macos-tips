@@ -5,6 +5,7 @@
 3. [Spotlight](#spotlight)
 4. [Homebrew](#homebrew)
 5. [Screen Capture](#screen-capture)
+9. [Millipede](#millipede)
 
 # Software Update
 
@@ -16,7 +17,7 @@ $ softwareupdate --list
 $ softwareupdate --install --all
 ```
 
-## Set software update check daily instead of weekly
+## Set software update check daily
 
 ```bash
 $ man defaults
@@ -65,7 +66,17 @@ $ defaults write com.apple.screencapture type png
 $ killall SystemUIServer
 ```
 
+# Ubuntu
 
+```bash
+$ hdiutil convert -format UDRW -o /path/to/target.img /path/to/ubuntu.iso
+$ diskutil list
+$ diskutil unmountDisk /dev/diskN
+$ sudo dd if=/path/to/target.img of=/dev/rdiskN bs=1m
+$ diskutil eject /dev/diskN
+```
+
+# Millipede
 
 ```
     ╚⊙ ⊙╝
