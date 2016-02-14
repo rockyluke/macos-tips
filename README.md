@@ -1,4 +1,4 @@
-# osx-cli ![License badge][license-img]
+# osx-cli ![License][license-img] ![Yosemite][10-10-img] ![El Capitan][10-11-img]
 
 /!\ DISCLAIMER /!\
 
@@ -105,3 +105,5 @@ $ diskutil eject /dev/diskN
 ```
 
 [license-img]: https://img.shields.io/badge/license-ISC-blue.svg
+[10-10-img]: https://img.shields.io/badge/osx-10.10-blue.svg
+[10-11-img]: https://img.shields.io/badge/osx-10.11-blue.svg
