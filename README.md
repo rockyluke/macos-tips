@@ -2,7 +2,12 @@
 
 /!\ DISCLAIMER /!\
 
+https://www.apple.com/opensource/
+https://developer.apple.com/opensource/
+https://github.com/apple
+
 ```bash
+$ man man
 $ man defaults
 ```
 
