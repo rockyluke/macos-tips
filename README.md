@@ -30,7 +30,7 @@ $ man pmset
 
 ## Disable Sudden Motion Sensor (SMS) for SSD
 
-Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia")) article to understand SMS.
+Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") (or [french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia")) article to understand SMS.
 
 ```bash
 $ pmset -a sms 0
