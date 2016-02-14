@@ -19,6 +19,7 @@ $ softwareupdate --install --all
 ## Set software update check daily instead of weekly
 
 ```bash
+$ man defaults
 $ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
@@ -58,6 +59,7 @@ $ brew update
 Change location and format of screen capture.
 
 ```bash
+$ man defaults
 $ defaults write com.apple.screencapture location ~/Pictures/
 $ defaults write com.apple.screencapture type png
 $ killall SystemUIServer
