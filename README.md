@@ -2,6 +2,10 @@
 
 /!\ DISCLAIMER /!\
 
+```bash
+$ man defaults
+```
+
 # Software Update
 
 ## List and install all available software updates
@@ -15,7 +19,6 @@ $ softwareupdate --install --all
 ## Set software update check daily
 
 ```bash
-$ man defaults
 $ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
@@ -56,7 +59,13 @@ $ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
 ```bash
 $ man mdutil
-$ mdutil -i off -d /path/to/volume
+```
+
+```bash
+$ mdutil -i on /path/to/volume
+```
+
+```bash
 $ mdutil -i on /path/to/volume
 ```
 
@@ -74,7 +83,6 @@ $ brew update
 Change location and format of screen capture.
 
 ```bash
-$ man defaults
 $ defaults write com.apple.screencapture location ~/Pictures/
 $ defaults write com.apple.screencapture type png
 $ killall SystemUIServer
