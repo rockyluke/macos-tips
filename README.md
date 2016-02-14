@@ -1,18 +1,10 @@
 # osx-cli ![License badge][license-img]
 
-# Disks & Volumes
-
-```bash
-$ man pmset
-```
-
-## Disable Sudden Motion Sensor (SMS) for SSD
-
-Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia")) article to understand SMS.
-
-```bash
-$ pmset -a sms 0
-```
+1. [Software Update](#software-update)
+2. [Disks & Volumes](#disks-&-volumes)
+3. [Spotlight](#spotlight)
+4. [Homebrew](#homebrew)
+5. [Screen Capture](#screen-capture)
 
 # Software Update
 
@@ -28,6 +20,20 @@ $ softwareupdate --install --all
 
 ```bash
 $ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+```
+
+# Disks & Volumes
+
+```bash
+$ man pmset
+```
+
+## Disable Sudden Motion Sensor (SMS) for SSD
+
+Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia")) article to understand SMS.
+
+```bash
+$ pmset -a sms 0
 ```
 
 # Spotlight
