@@ -22,12 +22,14 @@ $ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Volumes and Disks
 
 ```bash
+$ man diskutil
+$ man hdiutil
 $ man pmset
 ```
 
 ## Disable Sudden Motion Sensor (SMS) for SSD
 
-Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") (in [french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia")) article to understand SMS.
+Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") version) article to understand SMS.
 
 ```bash
 $ pmset -a sms 0
@@ -35,7 +37,7 @@ $ pmset -a sms 0
 
 # Metadata
 
-Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") (in [french](https://fr.wikipedia.org/wiki/.DS_Store "Wikipedia") article to understand .DS_Store.
+Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") ([french](https://fr.wikipedia.org/wiki/.DS_Store "Wikipedia") version) article to understand .DS_Store.
 
 ## Avoid the creation of .DS_Store on network volumes
 
