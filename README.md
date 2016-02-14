@@ -1,7 +1,7 @@
 # osx-cli ![License badge][license-img]
 
 1. [Software Update](#software-update)
-2. [Disks & Volumes](#disks-&-volumes)
+2. [Volumes and Disks](#volumes-and-disks)
 3. [Spotlight](#spotlight)
 4. [Homebrew](#homebrew)
 5. [Screen Capture](#screen-capture)
@@ -22,7 +22,7 @@ $ softwareupdate --install --all
 $ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
-# Disks & Volumes
+# Volumes and Disks
 
 ```bash
 $ man pmset
