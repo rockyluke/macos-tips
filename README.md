@@ -1,12 +1,6 @@
 # osx-cli ![License badge][license-img]
 
-1. [Software Update](#software-update)
-2. [Volumes and Disks](#volumes-and-disks)
-3. [Spotlight](#spotlight)
-4. [Homebrew](#homebrew)
-5. [Screen Capture](#screen-capture)
-6. [Ubuntu](#ubuntu)
-9. [Millipede](#millipede)
+/!\ DISCLAIMER /!\
 
 # Software Update
 
@@ -33,7 +27,7 @@ $ man pmset
 
 ## Disable Sudden Motion Sensor (SMS) for SSD
 
-Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") (or [french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia")) article to understand SMS.
+Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") (in [french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia")) article to understand SMS.
 
 ```bash
 $ pmset -a sms 0
@@ -41,22 +35,18 @@ $ pmset -a sms 0
 
 # Metadata
 
-Read [his]()
+Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") (in [french](https://fr.wikipedia.org/wiki/.DS_Store "Wikipedia") article to understand .DS_Store.
 
-Avoids creation of .DS_Store
-
-## Network Volumes
+## Avoid the creation of .DS_Store on network volumes
 
 ```bash
-# Avoids creation of .DS_Store
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+$ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 ```
 
-## USB Volumes
+## Avoid the creation of .DS_Store on USB
 
 ```bash
-# Avoids creation of .DS_Store
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+$ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 ```
 
 # Spotlight
