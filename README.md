@@ -39,6 +39,26 @@ Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") (or 
 $ pmset -a sms 0
 ```
 
+# Metadata
+
+Read [his]()
+
+Avoids creation of .DS_Store
+
+## Network Volumes
+
+```bash
+# Avoids creation of .DS_Store
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+```
+
+## USB Volumes
+
+```bash
+# Avoids creation of .DS_Store
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+```
+
 # Spotlight
 
 ```bash

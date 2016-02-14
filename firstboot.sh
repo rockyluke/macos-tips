@@ -23,6 +23,10 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Change location screen capture
 defaults write com.apple.screencapture location ~/Pictures/
 
+# Avoids creation of .DS_Store
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+
 # Millipede
 cat <<EOF
     ╚⊙ ⊙╝
