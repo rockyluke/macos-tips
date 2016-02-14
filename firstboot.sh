@@ -14,7 +14,7 @@
 # OTHER  TORTIOUS ACTION,  ARISING  OUT OF  OR  IN CONNECTION  WITH  THE USE  OR
 # PERFORMANCE OF THIS SOFTWARE.
 
-# Disable SMS
+# Disable SMS (for SSD)
 sudo pmset -a sms 0
 
 # Daily software update check
@@ -23,4 +23,14 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Change location screen capture
 defaults write com.apple.screencapture location ~/Pictures/
 
+# Millipede
+cat <<EOF
+    ╚⊙ ⊙╝
+  ╚═(███)═╝
+ ╚═(███)═╝
+╚═(███)═╝
+ ╚═(███)═╝
+  ╚═(███)═╝
+   ╚═(███)═╝
+EOF
 # EOF

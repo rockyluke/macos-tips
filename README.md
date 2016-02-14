@@ -68,6 +68,8 @@ $ killall SystemUIServer
 
 # Ubuntu
 
+This is a very short version of [this](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx "Ubuntu") article.
+
 ```bash
 $ hdiutil convert -format UDRW -o /path/to/target.img /path/to/ubuntu.iso
 $ diskutil list
