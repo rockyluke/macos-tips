@@ -19,7 +19,7 @@ $ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # Spotlight
 
 ```bash
-$ mdutil -h
+$ mdutil --help
 $ mdutil -i off -d /path/to/volume
 $ mdutil -i on /path/to/volume
 ```
