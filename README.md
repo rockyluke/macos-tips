@@ -5,6 +5,7 @@
 3. [Spotlight](#spotlight)
 4. [Homebrew](#homebrew)
 5. [Screen Capture](#screen-capture)
+6. [Ubuntu](#ubuntu)
 9. [Millipede](#millipede)
 
 # Software Update
