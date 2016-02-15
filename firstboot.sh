@@ -23,7 +23,7 @@ function error {
 
 function millipede {
 
-    echo 'Everything went well !'
+    echo 'Everything went well.'
     cat <<EOF
 
     ╚⊙ ⊙╝
@@ -51,17 +51,23 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-# Show absolute path in title bar
-defaults write com.apple.finder _FXShowPosixPathInTitle -booltrue
+# Show absolute path in Finder
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
 # Disable file extension change warning
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-# Show path bar
+# Show path bar in Finder
 defaults write com.apple.finder ShowPathbar -bool true
 
-# Show status bar
+# Show status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
+
+# Disable auto-restore in Preview
+defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
+
+# Disable Dashboard
+defaults write com.apple.dashboard mcx-disabled -boolean true
 
 # Millipede
 millipede

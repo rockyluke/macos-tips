@@ -149,6 +149,20 @@ $ defaults write com.apple.finder ShowPathbar -bool true
 $ defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
+# Preview
+
+## Disable auto-restore in Preview
+
+```bash
+$ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
+```
+
+# Dashboard
+
+```bash
+$ defaults write com.apple.dashboard mcx-disabled -boolean true
+```
+
 # Ubuntu
 
 This is a very short version of [this](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx "Ubuntu") article.
