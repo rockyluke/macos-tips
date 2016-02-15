@@ -201,18 +201,26 @@ $ killall SystemUIServer
 
 # Software update
 
-### List and install all available software updates
-
 ```bash
 $ man softwareupdate
+```
+
+### List software updates
+
+```bash
 $ softwareupdate --list
+```
+
+### Install software updates
+
+```bash
 $ softwareupdate --install --all
 ```
 
 ### Check software update daily
 
 ```bash
-$ defaults write com.apple.softwareupdate ScheduleFrequency -int 1
+$ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
 # Spotlight
