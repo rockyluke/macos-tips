@@ -46,11 +46,17 @@ $ pmset -a sms 0
 
 # Screen capture
 
-Change location and format of screen capture.
+## Change location of screen capture
 
 ```bash
 $ defaults write com.apple.screencapture location ~/Pictures/
-$ defaults write com.apple.screencapture type png
+$ killall SystemUIServer
+```
+
+## Change format of screen capture
+
+```bash
+$ defaults write com.apple.screencapture type jpg
 $ killall SystemUIServer
 ```
 
