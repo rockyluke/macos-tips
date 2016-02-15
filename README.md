@@ -101,19 +101,17 @@ $ brew update
 
 # Finder
 
-### Show / hide folder in Finder
-
 ```bash
 $ man chflags
 ```
 
-#### Show
+### Show folder
 
 ```bash
 $ chflags nohidden ~/Library
 ```
 
-#### Hide
+### Hide folder
 
 ```bash
 $ chflags nohidden ~/Public
