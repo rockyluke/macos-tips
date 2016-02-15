@@ -24,7 +24,7 @@ $ softwareupdate --install --all
 ### Check software update daily
 
 ```bash
-$ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+$ defaults write com.apple.softwareupdate ScheduleFrequency -int 1
 ```
 
 # Disks, filesystem and volumes
@@ -49,14 +49,14 @@ $ pmset -a sms 0
 ### Change location of screen capture
 
 ```bash
-$ defaults write com.apple.screencapture location ~/Pictures/
+$ defaults write com.apple.ScreenCapture location ~/Pictures/
 $ killall SystemUIServer
 ```
 
 ### Change format of screen capture
 
 ```bash
-$ defaults write com.apple.screencapture type jpg
+$ defaults write com.apple.ScreenCapture type jpg
 $ killall SystemUIServer
 ```
 
@@ -67,13 +67,13 @@ Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") ([french](https
 ### Disable the creation of .DS_Store on network volumes
 
 ```bash
-$ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+$ defaults write com.apple.DesktopServices DSDontWriteNetworkStores -bool true
 ```
 
 ### Disable the creation of .DS_Store on USB volumes
 
 ```bash
-$ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+$ defaults write com.apple.DesktopServices DSDontWriteUSBStores -bool true
 ```
 
 # Spotlight
@@ -129,6 +129,12 @@ $ defaults write com.apple.Finder AppleShowAllFiles -bool true
 $ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 ```
 
+### Show all extensions
+
+```bash
+$ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+```
+
 ### Disable file extension change warning
 
 ```bash
@@ -171,6 +177,10 @@ $ defaults write com.apple.Dashboard mcx-disabled -boolean true
 
 # Locate
 
+```bash
+$ man launchctl
+```
+
 ### Enable locate
 
 ```bash
@@ -190,7 +200,7 @@ $ defaults write com.apple.ImageCapture disableHotPlug -bool true
 ### Show in Notifications
 
 ```bash
-$ defaults write com.apple.CrashReporter UseUNC 1
+$ defaults write com.apple.CrashReporter UseUNC -bool true
 ```
 
 # DNS

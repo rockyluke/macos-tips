@@ -70,7 +70,7 @@ defaults write com.apple.Dashboard mcx-disabled -boolean true
 defaults write com.apple.ImageCapture disableHotPlug -bool true
 
 # Show Crash Reporter in Notifications
-defaults write com.apple.CrashReporter UseUNC 1
+defaults write com.apple.CrashReporter UseUNC -bool true
 
 # Millipede
 millipede
