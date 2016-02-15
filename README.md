@@ -64,13 +64,13 @@ $ killall SystemUIServer
 
 Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") ([french](https://fr.wikipedia.org/wiki/.DS_Store "Wikipedia")) article to understand .DS_Store.
 
-## Avoid the creation of .DS_Store on network volumes
+## Disable the creation of .DS_Store on network volumes
 
 ```bash
 $ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 ```
 
-## Avoid the creation of .DS_Store on USB
+## Disable the creation of .DS_Store on USB
 
 ```bash
 $ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
