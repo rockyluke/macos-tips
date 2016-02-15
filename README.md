@@ -55,6 +55,13 @@ $ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 $ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 ```
 
+# Finder
+
+```bash
+$ defaults write com.apple.finder AppleShowAllFiles -bool true
+$ killall Finder
+````
+
 # Spotlight
 
 ```bash
