@@ -13,7 +13,7 @@ $ man defaults
 
 # Software update
 
-## List and install all available software updates
+### List and install all available software updates
 
 ```bash
 $ man softwareupdate
@@ -21,7 +21,7 @@ $ softwareupdate --list
 $ softwareupdate --install --all
 ```
 
-## Set software update check daily
+### Check software update daily
 
 ```bash
 $ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
@@ -36,7 +36,7 @@ $ man pmset
 $ man fs_usage
 ```
 
-## Disable Sudden Motion Sensor (SMS) for SSD
+### Disable Sudden Motion Sensor (SMS) for SSD
 
 Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia")) article to understand SMS.
 
@@ -46,14 +46,14 @@ $ pmset -a sms 0
 
 # Screen capture
 
-## Change location of screen capture
+### Change location of screen capture
 
 ```bash
 $ defaults write com.apple.screencapture location ~/Pictures/
 $ killall SystemUIServer
 ```
 
-## Change format of screen capture
+### Change format of screen capture
 
 ```bash
 $ defaults write com.apple.screencapture type jpg
@@ -64,13 +64,13 @@ $ killall SystemUIServer
 
 Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") ([french](https://fr.wikipedia.org/wiki/.DS_Store "Wikipedia")) article to understand .DS_Store.
 
-## Disable the creation of .DS_Store on network volumes
+### Disable the creation of .DS_Store on network volumes
 
 ```bash
 $ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 ```
 
-## Disable the creation of .DS_Store on USB volumes
+### Disable the creation of .DS_Store on USB volumes
 
 ```bash
 $ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
@@ -101,49 +101,49 @@ $ brew update
 
 # Finder
 
-## Show / hide folder in Finder
+### Show / hide folder in Finder
 
 ```bash
 $ man chflags
 ```
 
-### Show
+#### Show
 
 ```bash
 $ chflags nohidden ~/Library
 ```
 
-### Hide
+#### Hide
 
 ```bash
 $ chflags nohidden ~/Public
 ```
 
-## Expand save panel by default
+### Expand save panel by default
 
 ```bash
 $ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 ```
 
-## Disable file extension change warning
+### Disable file extension change warning
 
 ```bash
 $ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 ```
 
-## Show absolute path in title bar
+### Show absolute path in title bar
 
 ```bash
 $ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 ```
 
-## Show path bar
+### Show path bar
 
 ```bash
 $ defaults write com.apple.finder ShowPathbar -bool true
 ```
 
-## Show status bar
+### Show status bar
 
 ```bash
 $ defaults write com.apple.finder ShowStatusBar -bool true
@@ -151,7 +151,7 @@ $ defaults write com.apple.finder ShowStatusBar -bool true
 
 # Preview
 
-## Disable auto-restore in Preview
+### Disable auto-restore
 
 ```bash
 $ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false

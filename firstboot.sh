@@ -38,7 +38,7 @@ EOF
 
 } # millipede
 
-# Software update check
+# Check software update daily
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Change location screen capture
@@ -54,14 +54,11 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Show absolute path in Finder
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
-# Disable file extension change warning
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-
-# Show path bar in Finder
-defaults write com.apple.finder ShowPathbar -bool true
-
 # Show status bar in Finder
 defaults write com.apple.finder ShowStatusBar -bool true
+
+# Disable file extension change warning
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
 # Disable auto-restore in Preview
 defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
