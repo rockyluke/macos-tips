@@ -70,7 +70,7 @@ Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") ([french](https
 $ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 ```
 
-## Disable the creation of .DS_Store on USB
+## Disable the creation of .DS_Store on USB volumes
 
 ```bash
 $ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
