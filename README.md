@@ -1,18 +1,18 @@
 # osx-cli ![License][license-img] ![Yosemite][10-10-img] ![El Capitan][10-11-img]
 
-1. [Crash Reporter](#crash-reporter)
-2. [Dashboard](#dashboard)
-3. [Disks](#disks)
-4. [DNS](#dns)
-5. [Finder](#finder)
-6. [Homebrew](#homebrew)
-7. [Locate](#locate)
-8. [Metadata](#metadata)
-9. [Photos](#photos)
-10. [Preview](#preview)
-11. [Screen capture](#screen-capture)
-12. [Software update](#software-update)
-13. [Spotlight](#spotlight)
+- [Crash Reporter](#crash-reporter)
+- [Dashboard](#dashboard)
+- [Disks](#disks)
+- [DNS](#dns)
+- [Finder](#finder)
+- [Homebrew](#homebrew)
+- [Locate](#locate)
+- [Metadata](#metadata)
+- [Photos](#photos)
+- [Preview](#preview)
+- [Screen capture](#screen-capture)
+- [Software update](#software-update)
+- [Spotlight](#spotlight)
 
 /!\ DISCLAIMER /!\
 
