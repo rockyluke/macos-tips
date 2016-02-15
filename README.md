@@ -11,7 +11,7 @@ $ man man
 $ man defaults
 ```
 
-# Software Update
+# Software update
 
 ## List and install all available software updates
 
@@ -27,7 +27,7 @@ $ softwareupdate --install --all
 $ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
-# Disks, Filesystems and Volumes
+# Disks, filesystem and volumes
 
 ```bash
 $ man diskutil
@@ -42,6 +42,16 @@ Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([fr
 
 ```bash
 $ pmset -a sms 0
+```
+
+# Screen capture
+
+Change location and format of screen capture.
+
+```bash
+$ defaults write com.apple.screencapture location ~/Pictures/
+$ defaults write com.apple.screencapture type png
+$ killall SystemUIServer
 ```
 
 # Metadata
@@ -83,14 +93,54 @@ $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/maste
 $ brew update
 ```
 
-# Screen Capture
+# Finder
 
-Change location and format of screen capture.
+## Show / hide folder in Finder
 
 ```bash
-$ defaults write com.apple.screencapture location ~/Pictures/
-$ defaults write com.apple.screencapture type png
-$ killall SystemUIServer
+$ man chflags
+```
+
+### Show
+
+```bash
+$ chflags nohidden ~/Library
+```
+
+### Hide
+
+```bash
+$ chflags nohidden ~/Public
+```
+
+## Expand save panel by default
+
+```bash
+$ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+```
+
+## Disable file extension change warning
+
+```bash
+$ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+```
+
+## Show absolute path in title bar
+
+```bash
+$ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+```
+
+## Show path bar
+
+```bash
+$ defaults write com.apple.finder ShowPathbar -bool true
+```
+
+## Show status bar
+
+```bash
+$ defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
 # Ubuntu

@@ -14,10 +14,31 @@
 # OTHER  TORTIOUS ACTION,  ARISING  OUT OF  OR  IN CONNECTION  WITH  THE USE  OR
 # PERFORMANCE OF THIS SOFTWARE.
 
-# Disable SMS (for SSD)
-sudo pmset -a sms 0
+function error {
 
-# Daily software update check
+    echo 'Something went wrong...'
+    exit 1
+
+} # error
+
+function millipede {
+
+    echo 'Everything went well !'
+    cat <<EOF
+
+    ╚⊙ ⊙╝
+  ╚═(███)═╝
+ ╚═(███)═╝
+╚═(███)═╝
+ ╚═(███)═╝
+  ╚═(███)═╝
+   ╚═(███)═╝
+
+EOF
+
+} # millipede
+
+# Software update check
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Change location screen capture
@@ -27,14 +48,21 @@ defaults write com.apple.screencapture location ~/Pictures/
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+
+# Show absolute path in title bar
+defaults write com.apple.finder _FXShowPosixPathInTitle -booltrue
+
+# Disable file extension change warning
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+
+# Show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
 # Millipede
-cat <<EOF
-    ╚⊙ ⊙╝
-  ╚═(███)═╝
- ╚═(███)═╝
-╚═(███)═╝
- ╚═(███)═╝
-  ╚═(███)═╝
-   ╚═(███)═╝
-EOF
+millipede
 # EOF
