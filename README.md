@@ -157,6 +157,8 @@ $ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 
 # Dashboard
 
+### Disable Dashboard
+
 ```bash
 $ defaults write com.apple.dashboard mcx-disabled -boolean true
 ```
