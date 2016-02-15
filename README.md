@@ -20,7 +20,7 @@
 - [developer.apple.com/opensource](https://developer.apple.com/opensource/)
 - [github.com/apple](https://github.com/apple)
 
-Read carefully the manual before using any command.
+Read carefully the manuals before using any commands.
 
 ```bash
 $ man man
