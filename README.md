@@ -114,7 +114,7 @@ $ chflags nohidden ~/Library
 ### Hide folder
 
 ```bash
-$ chflags nohidden ~/Public
+$ chflags hidden ~/Public
 ```
 
 ### Show hidden files
