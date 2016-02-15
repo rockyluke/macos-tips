@@ -13,7 +13,6 @@
 11. [Screen capture](#screen-capture)
 12. [Software update](#software-update)
 13. [Spotlight](#spotlight)
-14. [Ubuntu](#ubuntu)
 
 
 - [www.apple.com/opensource](https://www.apple.com/opensource/)
