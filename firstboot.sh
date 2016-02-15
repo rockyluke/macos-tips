@@ -42,29 +42,35 @@ EOF
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
 # Change location screen capture
-defaults write com.apple.screencapture location ~/Pictures/
+defaults write com.apple.ScreenCapture location ~/Pictures/
 
 # Disable creation of .DS_Store
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+defaults write com.apple.DesktopServices DSDontWriteNetworkStores -bool true
+defaults write com.apple.DesktopServices DSDontWriteUSBStores -bool true
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 # Show absolute path in Finder
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true
 
 # Show status bar in Finder
-defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.Finder ShowStatusBar -bool true
 
 # Disable file extension change warning
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+defaults write com.apple.Finder FXEnableExtensionChangeWarning -bool false
 
 # Disable auto-restore in Preview
 defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 
 # Disable Dashboard
-defaults write com.apple.dashboard mcx-disabled -boolean true
+defaults write com.apple.Dashboard mcx-disabled -boolean true
+
+# Disable automatic opening in Photos
+defaults write com.apple.ImageCapture disableHotPlug -bool true
+
+# Show Crash Reporter in Notifications
+defaults write com.apple.CrashReporter UseUNC 1
 
 # Millipede
 millipede

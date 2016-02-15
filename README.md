@@ -120,7 +120,7 @@ $ chflags nohidden ~/Public
 ### Show hidden files
 
 ```bash
-$ defaults write com.apple.finder AppleShowAllFiles -bool true
+$ defaults write com.apple.Finder AppleShowAllFiles -bool true
 ````
 
 ### Expand save panel by default
@@ -132,25 +132,25 @@ $ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 ### Disable file extension change warning
 
 ```bash
-$ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+$ defaults write com.apple.Finder FXEnableExtensionChangeWarning -bool false
 ```
 
 ### Show absolute path in title bar
 
 ```bash
-$ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+$ defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true
 ```
 
 ### Show path bar
 
 ```bash
-$ defaults write com.apple.finder ShowPathbar -bool true
+$ defaults write com.apple.Finder ShowPathbar -bool true
 ```
 
 ### Show status bar
 
 ```bash
-$ defaults write com.apple.finder ShowStatusBar -bool true
+$ defaults write com.apple.Finder ShowStatusBar -bool true
 ```
 
 # Preview
@@ -163,10 +163,41 @@ $ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 
 # Dashboard
 
-### Disable Dashboard
+### Disable OSX dashboard
 
 ```bash
-$ defaults write com.apple.dashboard mcx-disabled -boolean true
+$ defaults write com.apple.Dashboard mcx-disabled -boolean true
+```
+
+# Locate
+
+### Enable locate
+
+```bash
+$ launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+```
+
+# Photos
+
+### Disable automatic opening
+
+```bash
+$ defaults write com.apple.ImageCapture disableHotPlug -bool true
+```
+
+# Crash Reporter
+
+### Show in Notifications
+
+```bash
+$ defaults write com.apple.CrashReporter UseUNC 1
+```
+
+# DNS
+
+### Flush dns cache
+
+```bash
 ```
 
 # Ubuntu
