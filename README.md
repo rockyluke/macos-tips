@@ -1,33 +1,51 @@
 # osx-cli ![License][license-img] ![Yosemite][10-10-img] ![El Capitan][10-11-img]
 
-/!\ DISCLAIMER /!\
+1. [Crash Reporter](#crash-reporter)
+2. [Dashboard](#dashboard)
+3. [Disks](#disks)
+4. [DNS](#dns)
+5. [Finder](#finder)
+6. [Homebrew](#homebrew)
+7. [Locate](#locate)
+8. [Metadata](#metadata)
+9. [Photos](#photos)
+10. [Preview](#preview)
+11. [Screen capture](#screen-capture)
+12. [Software update](#software-update)
+13. [Spotlight](#spotlight)
+14. [Ubuntu](#ubuntu)
+
 
 - [www.apple.com/opensource](https://www.apple.com/opensource/)
 - [developer.apple.com/opensource](https://developer.apple.com/opensource/)
 - [github.com/apple](https://github.com/apple)
+
+/!\ DISCLAIMER /!\
+
+Read carefully the manual before using any command.
 
 ```bash
 $ man man
 $ man defaults
 ```
 
-# Software update
+# Crash Reporter
 
-### List and install all available software updates
-
-```bash
-$ man softwareupdate
-$ softwareupdate --list
-$ softwareupdate --install --all
-```
-
-### Check software update daily
+### Show in Notifications
 
 ```bash
-$ defaults write com.apple.softwareupdate ScheduleFrequency -int 1
+$ defaults write com.apple.CrashReporter UseUNC -bool true
 ```
 
-# Disks, filesystem and volumes
+# Dashboard
+
+### Disable OSX dashboard
+
+```bash
+$ defaults write com.apple.Dashboard mcx-disabled -boolean true
+```
+
+# Disks
 
 ```bash
 $ man diskutil
@@ -44,59 +62,12 @@ Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([fr
 $ pmset -a sms 0
 ```
 
-# Screen capture
+# DNS
 
-### Change location of screen capture
-
-```bash
-$ defaults write com.apple.ScreenCapture location ~/Pictures/
-$ killall SystemUIServer
-```
-
-### Change format of screen capture
+### Flush dns cache
 
 ```bash
-$ defaults write com.apple.ScreenCapture type jpg
-$ killall SystemUIServer
-```
-
-# Metadata
-
-Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") ([french](https://fr.wikipedia.org/wiki/.DS_Store "Wikipedia")) article to understand .DS_Store.
-
-### Disable the creation of .DS_Store on network volumes
-
-```bash
-$ defaults write com.apple.DesktopServices DSDontWriteNetworkStores -bool true
-```
-
-### Disable the creation of .DS_Store on USB volumes
-
-```bash
-$ defaults write com.apple.DesktopServices DSDontWriteUSBStores -bool true
-```
-
-# Spotlight
-
-```bash
-$ man mdutil
-```
-
-```bash
-$ mdutil -i on /path/to/volume
-```
-
-```bash
-$ mdutil -i on /path/to/volume
-```
-
-# Homebrew
-
-http://brew.sh/
-
-```bash
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ brew update
+$ dscacheutil -flushcache
 ```
 
 # Finder
@@ -121,7 +92,7 @@ $ chflags hidden ~/Public
 
 ```bash
 $ defaults write com.apple.Finder AppleShowAllFiles -bool true
-````
+```
 
 ### Expand save panel by default
 
@@ -159,20 +130,13 @@ $ defaults write com.apple.Finder ShowPathbar -bool true
 $ defaults write com.apple.Finder ShowStatusBar -bool true
 ```
 
-# Preview
+# Homebrew
 
-### Disable auto-restore
-
-```bash
-$ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
-```
-
-# Dashboard
-
-### Disable OSX dashboard
+Homepage : http://brew.sh/
 
 ```bash
-$ defaults write com.apple.Dashboard mcx-disabled -boolean true
+$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew update
 ```
 
 # Locate
@@ -187,6 +151,22 @@ $ man launchctl
 $ launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 ```
 
+# Metadata
+
+Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") ([french](https://fr.wikipedia.org/wiki/.DS_Store "Wikipedia")) article to understand .DS_Store.
+
+### Disable the creation of .DS_Store on network volumes
+
+```bash
+$ defaults write com.apple.DesktopServices DSDontWriteNetworkStores -bool true
+```
+
+### Disable the creation of .DS_Store on USB volumes
+
+```bash
+$ defaults write com.apple.DesktopServices DSDontWriteUSBStores -bool true
+```
+
 # Photos
 
 ### Disable automatic opening
@@ -195,19 +175,62 @@ $ launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 $ defaults write com.apple.ImageCapture disableHotPlug -bool true
 ```
 
-# Crash Reporter
+# Preview
 
-### Show in Notifications
+### Disable auto-restore
 
 ```bash
-$ defaults write com.apple.CrashReporter UseUNC -bool true
+$ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 ```
 
-# DNS
+# Screen capture
 
-### Flush dns cache
+### Change location of screen capture
 
 ```bash
+$ defaults write com.apple.ScreenCapture location ~/Pictures/
+$ killall SystemUIServer
+```
+
+### Change format of screen capture
+
+```bash
+$ defaults write com.apple.ScreenCapture type jpg
+$ killall SystemUIServer
+```
+
+# Software update
+
+### List and install all available software updates
+
+```bash
+$ man softwareupdate
+$ softwareupdate --list
+$ softwareupdate --install --all
+```
+
+### Check software update daily
+
+```bash
+$ defaults write com.apple.softwareupdate ScheduleFrequency -int 1
+```
+
+# Spotlight
+
+```bash
+$ man mdutil
+```
+
+### Disable indexing of a volume
+
+```bash
+$ mdutil -i off /path/to/volume
+```
+
+### Enable indexing of a volume
+
+```bash
+$ mdutil -i on /path/to/volume
 ```
 
 # Ubuntu
