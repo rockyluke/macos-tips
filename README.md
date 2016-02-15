@@ -14,13 +14,11 @@
 12. [Software update](#software-update)
 13. [Spotlight](#spotlight)
 
+/!\ DISCLAIMER /!\
 
 - [www.apple.com/opensource](https://www.apple.com/opensource/)
 - [developer.apple.com/opensource](https://developer.apple.com/opensource/)
 - [github.com/apple](https://github.com/apple)
-
-
-/!\ DISCLAIMER /!\
 
 Read carefully the manual before using any command.
 
