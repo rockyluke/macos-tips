@@ -33,7 +33,7 @@ $ man defaults
 ### Disable Crash Reporter
 
 ```bash
-$ defaults write com.apple.CrashReporter DialogType -string "none"
+$ defaults write com.apple.CrashReporter DialogType -string 'none'
 ```
 
 ### Show Crash Reporter in Notifications
@@ -106,19 +106,19 @@ $ chflags hidden ~/Public
 $ defaults write com.apple.Finder AppleShowAllFiles -bool true
 ```
 
-### Show absolute path in Finder
+### Show absolute path in title
 
 ```bash
 $ defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true
 ```
 
-### Show 'Path Bar' in Finder
+### Show 'Path Bar'
 
 ```bash
 $ defaults write com.apple.Finder ShowPathbar -bool true
 ```
 
-### Show 'Status Bar' in Finder
+### Show 'Status Bar'
 
 ```bash
 $ defaults write com.apple.Finder ShowStatusBar -bool true
@@ -173,7 +173,7 @@ $ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 Choose between : 'WhenScrolling', 'Automatic' or 'Always'
 
 ```bash
-$ write NSGlobalDomain AppleShowScrollBars -string 'Always'
+$ defaults write NSGlobalDomain AppleShowScrollBars -string 'Always'
 ```
 
 # Homebrew
@@ -239,22 +239,22 @@ $ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 
 # Screen capture
 
-### Change location of Screen Capture
+### Change the location of the screenshot
 
 ```bash
 $ defaults write com.apple.ScreenCapture location ~/Pictures/
 ```
 
-### Change format of Screen Capture
+### Change the format of the screenshot
 
 ```bash
 $ defaults write com.apple.ScreenCapture type jpg
 ```
 
-### Disable shadow in Screen Capture
+### Disable shadow in screenshot
 
 ```bash
-$ defaults write com.apple.screencapture disable-shadow -bool true
+$ defaults write com.apple.ScreenCapture disable-shadow -bool true
 ```
 
 # Software update

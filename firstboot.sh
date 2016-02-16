@@ -27,10 +27,10 @@ defaults write com.apple.CrashReporter UseUNC -bool true
 # Disable Dashboard
 defaults write com.apple.Dashboard mcx-disabled -boolean true
 
-# Show absolute path in Finder
+# Show absolute path in title
 defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true
 
-# Show 'Status Bar' in Finder
+# Show 'Status Bar'
 defaults write com.apple.Finder ShowStatusBar -bool true
 
 # Disable file extension change warning
@@ -60,7 +60,7 @@ defaults write com.apple.ImageCapture disableHotPlug -bool true
 defaults write com.apple.DesktopServices DSDontWriteNetworkStores -bool true
 defaults write com.apple.DesktopServices DSDontWriteUSBStores -bool true
 
-# Change location screen capture
+# Change the location of the screenshot
 defaults write com.apple.ScreenCapture location ~/Pictures/
 
 # Check software update daily
