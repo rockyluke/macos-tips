@@ -14,64 +14,58 @@
 # OTHER  TORTIOUS ACTION,  ARISING  OUT OF  OR  IN CONNECTION  WITH  THE USE  OR
 # PERFORMANCE OF THIS SOFTWARE.
 
-function error {
+# https://www.apple.com/opensource/
+# https://developer.apple.com/opensource/
+# https://github.com/apple
 
-    echo 'Something went wrong...'
-    exit 1
+# Ask for the administrator password
+# sudo -v
 
-} # error
+# Show Crash Reporter in Notifications
+defaults write com.apple.CrashReporter UseUNC -bool true
 
-function millipede {
-
-    echo 'Everything went well.'
-    cat <<EOF
-
-    ╚⊙ ⊙╝
-  ╚═(███)═╝
- ╚═(███)═╝
-╚═(███)═╝
- ╚═(███)═╝
-  ╚═(███)═╝
-   ╚═(███)═╝
-
-EOF
-
-} # millipede
-
-# Check software update daily
-defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-
-# Change location screen capture
-defaults write com.apple.ScreenCapture location ~/Pictures/
-
-# Disable creation of .DS_Store
-defaults write com.apple.DesktopServices DSDontWriteNetworkStores -bool true
-defaults write com.apple.DesktopServices DSDontWriteUSBStores -bool true
-
-# Expand save panel by default
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+# Disable Dashboard
+defaults write com.apple.Dashboard mcx-disabled -boolean true
 
 # Show absolute path in Finder
 defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true
 
-# Show status bar in Finder
+# Show 'Status Bar' in Finder
 defaults write com.apple.Finder ShowStatusBar -bool true
 
 # Disable file extension change warning
 defaults write com.apple.Finder FXEnableExtensionChangeWarning -bool false
 
-# Disable auto-restore in Preview
-defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 
-# Disable Dashboard
-defaults write com.apple.Dashboard mcx-disabled -boolean true
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Save to disk by default
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+
+# Disable smart quotes
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Disable smart dashes
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Disable automatic opening in Photos
 defaults write com.apple.ImageCapture disableHotPlug -bool true
 
-# Show Crash Reporter in Notifications
-defaults write com.apple.CrashReporter UseUNC -bool true
+# Disable creation of .DS_Store
+defaults write com.apple.DesktopServices DSDontWriteNetworkStores -bool true
+defaults write com.apple.DesktopServices DSDontWriteUSBStores -bool true
 
-# Millipede
-millipede
+# Change location screen capture
+defaults write com.apple.ScreenCapture location ~/Pictures/
+
+# Check software update daily
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Disable auto-restore in Preview
+defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 # EOF

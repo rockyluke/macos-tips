@@ -8,6 +8,7 @@
 - [Homebrew](#homebrew)
 - [Locate](#locate)
 - [Metadata](#metadata)
+- [Notifications](#notifications)
 - [Photos](#photos)
 - [Preview](#preview)
 - [Screen capture](#screen-capture)
@@ -29,7 +30,13 @@ $ man defaults
 
 # Crash Reporter
 
-### Show in Notifications
+### Disable Crash Reporter
+
+```bash
+$ defaults write com.apple.CrashReporter DialogType -string "none"
+```
+
+### Show Crash Reporter in Notifications
 
 ```bash
 $ defaults write com.apple.CrashReporter UseUNC -bool true
@@ -47,9 +54,10 @@ $ defaults write com.apple.Dashboard mcx-disabled -boolean true
 
 ```bash
 $ man diskutil
+$ man fs_usage
 $ man hdiutil
 $ man pmset
-$ man fs_usage
+$ man tmutil
 ```
 
 ### Disable Sudden Motion Sensor (SMS) for SSD
@@ -58,6 +66,12 @@ Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([fr
 
 ```bash
 $ pmset -a sms 0
+```
+
+### Disable Time Machine local snapshots
+
+```bash
+$ tmutil disablelocal
 ```
 
 # DNS
@@ -92,16 +106,22 @@ $ chflags hidden ~/Public
 $ defaults write com.apple.Finder AppleShowAllFiles -bool true
 ```
 
-### Expand save panel by default
+### Show absolute path in Finder
 
 ```bash
-$ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+$ defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true
 ```
 
-### Show all extensions
+### Show 'Path Bar' in Finder
 
 ```bash
-$ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+$ defaults write com.apple.Finder ShowPathbar -bool true
+```
+
+### Show 'Status Bar' in Finder
+
+```bash
+$ defaults write com.apple.Finder ShowStatusBar -bool true
 ```
 
 ### Disable file extension change warning
@@ -110,22 +130,50 @@ $ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 $ defaults write com.apple.Finder FXEnableExtensionChangeWarning -bool false
 ```
 
-### Show absolute path in title bar
+### Expand save panel by default
 
 ```bash
-$ defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true
+$ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+$ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 ```
 
-### Show path bar
+### Expand print panel by default
 
 ```bash
-$ defaults write com.apple.Finder ShowPathbar -bool true
+$ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+$ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+````
+
+### Save to disk by default
+
+```bash
+$ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 ```
 
-### Show status bar
+### Show all extensions
 
 ```bash
-$ defaults write com.apple.Finder ShowStatusBar -bool true
+$ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+```
+
+### Disable smart quotes
+
+```bash
+$ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+```
+
+### Disable smart dashes
+
+```bash
+$ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+```
+
+### Show scrollbars 
+
+Choose between : 'WhenScrolling', 'Automatic' or 'Always'
+
+```bash
+$ write NSGlobalDomain AppleShowScrollBars -string 'Always'
 ```
 
 # Homebrew
@@ -165,6 +213,14 @@ $ defaults write com.apple.DesktopServices DSDontWriteNetworkStores -bool true
 $ defaults write com.apple.DesktopServices DSDontWriteUSBStores -bool true
 ```
 
+# Notifications
+
+### Disable Notifications
+
+```bash
+$ launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+```
+
 # Photos
 
 ### Disable automatic opening
@@ -183,18 +239,22 @@ $ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 
 # Screen capture
 
-### Change location of screen capture
+### Change location of Screen Capture
 
 ```bash
 $ defaults write com.apple.ScreenCapture location ~/Pictures/
-$ killall SystemUIServer
 ```
 
-### Change format of screen capture
+### Change format of Screen Capture
 
 ```bash
 $ defaults write com.apple.ScreenCapture type jpg
-$ killall SystemUIServer
+```
+
+### Disable shadow in Screen Capture
+
+```bash
+$ defaults write com.apple.screencapture disable-shadow -bool true
 ```
 
 # Software update
