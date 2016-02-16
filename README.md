@@ -44,7 +44,7 @@ $ defaults write com.apple.CrashReporter UseUNC -bool true
 
 # Dashboard
 
-### Disable OSX dashboard
+### Disable Dashboard
 
 ```bash
 $ defaults write com.apple.Dashboard mcx-disabled -boolean true
@@ -144,7 +144,7 @@ $ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 $ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 ````
 
-### Save to disk by default
+### Save to disk instead of iCloud by default
 
 ```bash
 $ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
