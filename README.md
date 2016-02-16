@@ -25,6 +25,7 @@ Read carefully the manuals before using any commands.
 
 ```bash
 $ man man
+$ man sudo
 $ man defaults
 ```
 
@@ -68,7 +69,7 @@ Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([fr
 $ pmset -a sms 0
 ```
 
-### Disable Time Machine local snapshots
+### Disable local Time Machine snapshots
 
 ```bash
 $ tmutil disablelocal
