@@ -57,8 +57,8 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 defaults write com.apple.ImageCapture disableHotPlug -bool true
 
 # Disable creation of .DS_Store
-defaults write com.apple.DesktopServices DSDontWriteNetworkStores -bool true
-defaults write com.apple.DesktopServices DSDontWriteUSBStores -bool true
+defaults write com.apple.DesktopServices DSDontWriteNetworkStores true
+defaults write com.apple.DesktopServices DSDontWriteUSBStores true
 
 # Change the location of the screenshot
 defaults write com.apple.ScreenCapture location ~/Pictures/

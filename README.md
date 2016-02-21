@@ -205,13 +205,13 @@ Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") ([french](https
 ### Disable the creation of .DS_Store on network volumes
 
 ```bash
-$ defaults write com.apple.DesktopServices DSDontWriteNetworkStores -bool true
+$ defaults write com.apple.DesktopServices DSDontWriteNetworkStores true
 ```
 
 ### Disable the creation of .DS_Store on USB volumes
 
 ```bash
-$ defaults write com.apple.DesktopServices DSDontWriteUSBStores -bool true
+$ defaults write com.apple.DesktopServices DSDontWriteUSBStores true
 ```
 
 # Notifications
