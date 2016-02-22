@@ -17,6 +17,8 @@
 
 /!\ DISCLAIMER /!\
 
+For El Capitan (OSX 10.11), you need to understand [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection "Wikipedia") before continuing this guide.
+
 - [www.apple.com/opensource](https://www.apple.com/opensource/)
 - [developer.apple.com/opensource](https://developer.apple.com/opensource/)
 - [github.com/apple](https://github.com/apple)
