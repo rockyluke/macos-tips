@@ -1,4 +1,4 @@
-# osx-cli ![License][license-img] ![Yosemite][10-10-img] ![El Capitan][10-11-img]
+# osx-cli ![License][license-img] [![Build Status][build-img]][build-url] ![Yosemite][10-10-img] ![El Capitan][10-11-img]
 
 - [Crash Reporter](#crash-reporter)
 - [Dashboard](#dashboard)
@@ -325,5 +325,7 @@ $ diskutil eject /dev/diskN
 ```
 
 [license-img]: https://img.shields.io/badge/license-ISC-blue.svg
+[build-img]: https://travis-ci.org/rockyluke/osx-cli.svg?branch=master
+[build-url]: https://travis-ci.org/rockyluke/osx-cli
 [10-10-img]: https://img.shields.io/badge/osx-10.10-green.svg
 [10-11-img]: https://img.shields.io/badge/osx-10.11-green.svg
