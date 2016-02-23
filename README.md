@@ -17,7 +17,17 @@
 
 /!\ DISCLAIMER /!\
 
-For El Capitan (OSX 10.11), you need to understand [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection "Wikipedia") before continuing this guide.
+For El Capitan (OSX 10.11), you need to understand and disable [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection "Wikipedia") before continuing this guide.
+
+# Disabling System Integrity Protection
+
+- Power on your Mac and hold down the cmd + r keys to access the Recovery Partition.
+- From the Recovery Partition, click Utilities from the menu bar, and then select Terminal.
+- Enter the following command into Terminal and press Enter to execute it:
+```bash
+$ csrutil disable
+```
+- Once the command has executed, exit the Terminal and reboot. When you log back into OS X, SIP will be disabled.
 
 - [www.apple.com/opensource](https://www.apple.com/opensource/)
 - [developer.apple.com/opensource](https://developer.apple.com/opensource/)
