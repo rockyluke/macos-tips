@@ -1,5 +1,6 @@
 # osx-cli ![License][license-img] [![Build Status][build-img]][build-url] ![Yosemite][10-10-img] ![El Capitan][10-11-img]
 
+- [System Integrity Protection](#system-integrity-protection)
 - [Crash Reporter](#crash-reporter)
 - [Dashboard](#dashboard)
 - [Disks](#disks)
@@ -19,7 +20,7 @@
 
 For El Capitan (OSX 10.11), you need to understand and disable [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection "Wikipedia") before continuing this guide.
 
-# Disabling System Integrity Protection
+# System Integrity Protection
 
 - Power on your Mac and hold down the cmd + r keys to access the Recovery Partition.
 - From the Recovery Partition, click Utilities from the menu bar, and then select Terminal.
@@ -29,11 +30,9 @@ $ csrutil disable
 ```
 - Once the command has executed, exit the Terminal and reboot. When you log back into OS X, SIP will be disabled.
 
-- [www.apple.com/opensource](https://www.apple.com/opensource/)
-- [developer.apple.com/opensource](https://developer.apple.com/opensource/)
-- [github.com/apple](https://github.com/apple)
+/!\ DISCLAIMER /!\
 
-Read carefully the manuals before using any commands.
+Read carefully the manual before using any commands.
 
 ```bash
 $ man man
@@ -335,6 +334,10 @@ $ diskutil eject /dev/diskN
   ╚═(███)═╝
    ╚═(███)═╝
 ```
+
+- [www.apple.com/opensource](https://www.apple.com/opensource/)
+- [developer.apple.com/opensource](https://developer.apple.com/opensource/)
+- [github.com/apple](https://github.com/apple)
 
 [license-img]: https://img.shields.io/badge/license-ISC-blue.svg
 [build-img]: https://travis-ci.org/rockyluke/osx-cli.svg?branch=master
