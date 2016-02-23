@@ -22,6 +22,7 @@ Read carefully the manual before using any commands on OS X.
 
 ```bash
 $ man man
+$ man csrutil
 $ man sudo
 $ man defaults
 ```
