@@ -16,8 +16,6 @@
 - [Software update](#software-update)
 - [Spotlight](#spotlight)
 
-/!\ DISCLAIMER /!\
-
 Read carefully the manual before using any commands on OS X.
 
 ```bash
@@ -26,7 +24,6 @@ $ man csrutil
 $ man sudo
 $ man defaults
 ```
-/!\ DISCLAIMER /!\
 
 # System Integrity Protection
 
