@@ -16,6 +16,8 @@
 - [Software update](#software-update)
 - [Spotlight](#spotlight)
 
+# Disclaimer
+
 Read carefully the manual before using any commands on OS X.
 
 ```bash
