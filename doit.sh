@@ -14,9 +14,9 @@
 # OTHER  TORTIOUS ACTION,  ARISING  OUT OF  OR  IN CONNECTION  WITH  THE USE  OR
 # PERFORMANCE OF THIS SOFTWARE.
 
-# https://www.apple.com/opensource/
 # https://developer.apple.com/opensource/
 # https://github.com/apple
+# https://www.apple.com/opensource/
 
 # Ask for the administrator password
 # sudo -v
