@@ -18,7 +18,7 @@
 
 # Disclaimer
 
-Read carefully the manual before using any commands on OS X.
+Read carefully the manual before using any commands on macsOS.
 
 ```bash
 $ man man
@@ -37,7 +37,7 @@ For El Capitan (macOS 10.11) and Sierra (macOS 10.12), you need to understand an
 ```bash
 $ csrutil disable
 ```
-- Once the command has executed, exit the Terminal and reboot. When you log back into OS X, SIP will be disabled.
+- Once the command has executed, exit the Terminal and reboot. When you log back into macOS, SIP will be disabled.
 
 # Crash Reporter
 
