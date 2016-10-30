@@ -29,7 +29,7 @@ $ man defaults
 
 # System Integrity Protection
 
-For El Capitan (OSX 10.11) and Sierra (macOS 10.12), you need to understand and disable [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection "Wikipedia") before continuing this guide.
+For El Capitan (macOS 10.11) and Sierra (macOS 10.12), you need to understand and disable [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection "Wikipedia") before continuing this guide.
 
 - Power on your Mac and hold down the CMD + R keys to access the Recovery Partition.
 - From the Recovery Partition, click Utilities from the menu bar, and then select Terminal.
