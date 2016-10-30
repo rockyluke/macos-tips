@@ -1,4 +1,4 @@
-# osx-cli ![License][license-img] [![Build Status][build-img]][build-url] ![Yosemite][10-10-img] ![El Capitan][10-11-img]
+# osx-cli ![License][license-img] [![Build Status][build-img]][build-url] ![Yosemite][10-10-img] ![El Capitan][10-11-img] ![Sierra][10-12-img]
 
 - [System Integrity Protection](#system-integrity-protection)
 - [Crash Reporter](#crash-reporter)
@@ -29,7 +29,7 @@ $ man defaults
 
 # System Integrity Protection
 
-For El Capitan (OSX 10.11), you need to understand and disable [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection "Wikipedia") before continuing this guide.
+For El Capitan (OSX 10.11) and Sierra (macOS 10.12), you need to understand and disable [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection "Wikipedia") before continuing this guide.
 
 - Power on your Mac and hold down the CMD + R keys to access the Recovery Partition.
 - From the Recovery Partition, click Utilities from the menu bar, and then select Terminal.
@@ -343,3 +343,4 @@ $ diskutil eject /dev/diskN
 [build-url]: https://travis-ci.org/rockyluke/osx-cli
 [10-10-img]: https://img.shields.io/badge/osx-10.10-green.svg
 [10-11-img]: https://img.shields.io/badge/osx-10.11-green.svg
+[10-12-img]: https://img.shields.io/badge/osx-10.12-green.svg
