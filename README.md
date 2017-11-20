@@ -5,6 +5,7 @@
 - [Dashboard](#dashboard)
 - [Disks](#disks)
 - [DNS](#dns)
+- [Dock](#dock)
 - [Finder](#finder)
 - [Homebrew](#homebrew)
 - [Locate](#locate)
@@ -15,42 +16,45 @@
 - [Screen capture](#screen-capture)
 - [Software update](#software-update)
 - [Spotlight](#spotlight)
+- [Miscellaneous](#miscellaneous)
 
-# Disclaimer
+## Disclaimer
 
 Read carefully the manual before using any commands on macsOS.
 
 ```bash
-$ man man
-$ man csrutil
-$ man sudo
-$ man defaults
+man man
+man csrutil
+man sudo
+man defaults
 ```
 
-# System Integrity Protection
+## System Integrity Protection
 
 For El Capitan (macOS 10.11) and Sierra (macOS 10.12), you need to understand and disable [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection "Wikipedia") before continuing this guide.
 
 - Power on your Mac and hold down the CMD + R keys to access the Recovery Partition.
 - From the Recovery Partition, click Utilities from the menu bar, and then select Terminal.
 - Enter the following command into Terminal and press Enter to execute it:
+
 ```bash
-$ csrutil disable
+csrutil disable
 ```
+
 - Once the command has executed, exit the Terminal and reboot. When you log back into macOS, SIP will be disabled.
 
-# Crash Reporter
+## Crash Reporter
 
 ### Disable Crash Reporter
 
 ```bash
-$ defaults write com.apple.CrashReporter DialogType -string 'none'
+defaults write com.apple.CrashReporter DialogType -string 'none'
 ```
 
 ### Show Crash Reporter in Notifications
 
 ```bash
-$ defaults write com.apple.CrashReporter UseUNC -bool true
+defaults write com.apple.CrashReporter UseUNC -bool true
 ```
 
 # Dashboard
@@ -58,17 +62,17 @@ $ defaults write com.apple.CrashReporter UseUNC -bool true
 ### Disable Dashboard
 
 ```bash
-$ defaults write com.apple.Dashboard mcx-disabled -boolean true
+defaults write com.apple.Dashboard mcx-disabled -boolean true
 ```
 
-# Disks
+## Disks
 
 ```bash
-$ man diskutil
-$ man fs_usage
-$ man hdiutil
-$ man pmset
-$ man tmutil
+man diskutil
+man fs_usage
+man hdiutil
+man pmset
+man tmutil
 ```
 
 ### Disable Sudden Motion Sensor (SMS) for SSD
@@ -76,253 +80,299 @@ $ man tmutil
 Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia")) article to understand SMS.
 
 ```bash
-$ pmset -a sms 0
+pmset -a sms 0
 ```
 
 ### Disable local Time Machine snapshots
 
 ```bash
-$ tmutil disablelocal
+tmutil disablelocal
 ```
 
-# DNS
+## DNS
 
 ### Flush dns cache
 
 ```bash
-$ dscacheutil -flushcache
+dscacheutil -flushcache
 ```
 
-# Finder
+## Dock
+
+![Docker][dock]
+
+### Automaticaly hide and show the Dock (true / false)
 
 ```bash
-$ man chflags
+defaults write com.apple.Dock autohide -bool true
+```
+
+### Automaticaly hide and show the Dock time (in ms)
+
+```bash
+defaults write com.apple.Dock autohide-delay -float 0
+```
+
+### Automaticaly hide and show the Dock delay (in ms)
+
+defaults write com.apple.Dock autohide-time-modifier -float 0
+
+### Animame opening application (true / false)
+
+```bash
+defaults write com.apple.Dock launchanim -bool false
+```
+
+### Minimize windows using (genie / scale)
+
+```bash
+defaults write com.apple.Dock mineffect -string "genie"
+```
+
+### Minimize windows into application icon (true / false)
+
+```bash
+defaults write com.apple.Dock minimize-to-application -bool true
+```
+
+### Show indicators for open applications (true / false)
+
+```bash
+defaults write com.apple.Dock show-process-indicators -bool true
+```
+
+##  Finder
+
+```bash
+man chflags
 ```
 
 ### Show folder
 
 ```bash
-$ chflags nohidden ~/Library
+chflags nohidden ~/Library
 ```
 
 ### Hide folder
 
 ```bash
-$ chflags hidden ~/Public
+chflags hidden ~/Public
 ```
 
 ### Show hidden files
 
 ```bash
-$ defaults write com.apple.Finder AppleShowAllFiles -bool true
+defaults write com.apple.Finder AppleShowAllFiles -bool true
 ```
 
 ### Show absolute path in title
 
 ```bash
-$ defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true
+defaults write com.apple.Finder _FXShowPosixPathInTitle -bool true
 ```
 
 ### Show 'Path Bar'
 
 ```bash
-$ defaults write com.apple.Finder ShowPathbar -bool true
+defaults write com.apple.Finder ShowPathbar -bool true
 ```
 
 ### Show 'Status Bar'
 
 ```bash
-$ defaults write com.apple.Finder ShowStatusBar -bool true
+defaults write com.apple.Finder ShowStatusBar -bool true
 ```
 
 ### Disable file extension change warning
 
 ```bash
-$ defaults write com.apple.Finder FXEnableExtensionChangeWarning -bool false
+defaults write com.apple.Finder FXEnableExtensionChangeWarning -bool false
 ```
 
 ### Expand save panel by default
 
 ```bash
-$ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-$ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 ```
 
 ### Expand print panel by default
 
 ```bash
-$ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-$ defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
 ````
 
 ### Save to disk instead of iCloud by default
 
 ```bash
-$ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 ```
 
 ### Show all extensions
 
 ```bash
-$ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 ```
 
 ### Disable smart quotes
 
 ```bash
-$ defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 ```
 
 ### Disable smart dashes
 
 ```bash
-$ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 ```
 
-### Show scrollbars 
+### Show scrollbars
 
 Choose between : 'WhenScrolling', 'Automatic' or 'Always'
 
 ```bash
-$ defaults write NSGlobalDomain AppleShowScrollBars -string 'Always'
+defaults write NSGlobalDomain AppleShowScrollBars -string 'Always'
 ```
 
-# Homebrew
+## Homebrew
 
 Homepage : http://brew.sh/
 
 ```bash
-$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ brew update
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew upgrade
+brew tap rockyluke/devops
+brew upgrade
 ```
 
-# Locate
+## Locate
 
 ```bash
-$ man launchctl
+man launchctl
 ```
 
 ### Enable locate
 
 ```bash
-$ launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 ```
 
-# Metadata
+## Metadata
 
 Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") ([french](https://fr.wikipedia.org/wiki/.DS_Store "Wikipedia")) article to understand .DS_Store.
 
 ### Disable the creation of .DS_Store on network volumes
 
 ```bash
-$ defaults write com.apple.DesktopServices DSDontWriteNetworkStores true
+defaults write com.apple.DesktopServices DSDontWriteNetworkStores true
 ```
 
 ### Disable the creation of .DS_Store on USB volumes
 
 ```bash
-$ defaults write com.apple.DesktopServices DSDontWriteUSBStores true
+defaults write com.apple.DesktopServices DSDontWriteUSBStores true
 ```
 
-# Notifications
+## Notifications
 
 ### Disable Notifications
 
 ```bash
-$ launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist
 ```
 
-# Photos
+## Photos
 
 ### Disable automatic opening
 
 ```bash
-$ defaults write com.apple.ImageCapture disableHotPlug -bool true
+defaults write com.apple.ImageCapture disableHotPlug -bool true
 ```
 
-# Preview
+## Preview
 
 ### Disable auto-restore
 
 ```bash
-$ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
+defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 ```
 
-# Screen capture
+## Screen capture
 
 ### Change the location of the screenshot
 
 ```bash
-$ defaults write com.apple.ScreenCapture location ~/Pictures/
+defaults write com.apple.ScreenCapture location ~/Pictures/
 ```
 
 ### Change the format of the screenshot
 
 ```bash
-$ defaults write com.apple.ScreenCapture type jpg
+defaults write com.apple.ScreenCapture type jpg
 ```
 
 ### Disable shadow in screenshot
 
 ```bash
-$ defaults write com.apple.ScreenCapture disable-shadow -bool true
+defaults write com.apple.ScreenCapture disable-shadow -bool true
 ```
 
-# Software update
+## Software update
 
 ```bash
-$ man softwareupdate
+man softwareupdate
 ```
 
 ### List software updates
 
 ```bash
-$ softwareupdate --list
+softwareupdate --list
 ```
 
 ### Install software updates
 
 ```bash
-$ softwareupdate --install --all
+softwareupdate --install --all
 ```
 
 ### Check software update daily
 
 ```bash
-$ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
-# Spotlight
+## Spotlight
 
 ```bash
-$ man mdutil
+man mdutil
 ```
 
 ### Disable indexing of a volume
 
 ```bash
-$ mdutil -i off /path/to/volume
+mdutil -i off /path/to/volume
 ```
 
 ### Enable indexing of a volume
 
 ```bash
-$ mdutil -i on /path/to/volume
+mdutil -i on /path/to/volume
 ```
 
-# Ubuntu
+## Ubuntu
 
 This is a very short version of [this](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx "Ubuntu") article.
 
 ```bash
-$ hdiutil convert -format UDRW -o /path/to/target.img /path/to/ubuntu.iso
-$ diskutil list
-$ diskutil unmountDisk /dev/diskN
-$ sudo dd if=/path/to/target.img of=/dev/rdiskN bs=1m
-$ diskutil eject /dev/diskN
+hdiutil convert -format UDRW -o /path/to/target.img /path/to/ubuntu.iso
+diskutil list
+diskutil unmountDisk /dev/diskN
+sudo dd if=/path/to/target.img of=/dev/rdiskN bs=1m
+diskutil eject /dev/diskN
 ```
 
-# Millipede
+## Miscellaneous
 
 ```
     ╚⊙ ⊙╝
@@ -344,3 +394,4 @@ $ diskutil eject /dev/diskN
 [10-10-img]: https://img.shields.io/badge/osx-10.10-green.svg
 [10-11-img]: https://img.shields.io/badge/osx-10.11-green.svg
 [10-12-img]: https://img.shields.io/badge/osx-10.12-green.svg
+[dock]: https://github.com/rockyluke/osx-cli/blob/master/images/Dock.png
