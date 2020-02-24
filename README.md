@@ -1,5 +1,15 @@
-# osx-cli ![License][license-img] [![Build Status][build-img]][build-url] ![Yosemite][10-10-img] ![El Capitan][10-11-img] ![Sierra][10-12-img]
+# osx-cli
 
+[![License][license-img]][licence-href]
+[![Build][build-img]][build-href]
+[![Yosemite][yosemite-img]][yosemite-href]
+[![El Capitan][elcapitan-img]][elcapitan-href]
+[![Sierra][sierra-img]][sierra-href]
+[![High Sierra][highsierra-img]][highsierra-href]
+[![Mojave][mojave-img]][mojave-href]
+[![Catalina][catalina-img]][catalina-href]
+
+- [Disclaimer](#disclaimer)
 - [System Integrity Protection](#system-integrity-protection)
 - [Crash Reporter](#crash-reporter)
 - [Dashboard](#dashboard)
@@ -8,6 +18,7 @@
 - [Dock](#dock)
 - [Finder](#finder)
 - [Homebrew](#homebrew)
+- [Hostname](#hostname)
 - [Locate](#locate)
 - [Metadata](#metadata)
 - [Notifications](#notifications)
@@ -20,28 +31,34 @@
 
 ## Disclaimer
 
-Read carefully the manual before using any commands on macsOS.
+Please read carefully the manual before using any commands on macsOS.
 
 ```bash
 man man
 man csrutil
+man scutil
 man sudo
 man defaults
 ```
 
 ## System Integrity Protection
 
-For El Capitan (macOS 10.11) and Sierra (macOS 10.12), you need to understand and disable [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection "Wikipedia") before continuing this guide.
+For El Capitan (macOS 10.11), Sierra  (macOS 10.12), High Sierra (macOS 10.13),
+Mojave (10.14)  and Catalina (macos 10.15)  you need to understand  and disable
+[System Integrity Protection][sip-href] before continuing this guide.
 
-- Power on your Mac and hold down the CMD + R keys to access the Recovery Partition.
-- From the Recovery Partition, click Utilities from the menu bar, and then select Terminal.
+- Power  on your  Mac and hold  down the CMD  + R  keys to access  the Recovery
+  Partition.
+- From  the Recovery  Partition, click  Utilities from the  menu bar,  and then
+  select Terminal.
 - Enter the following command into Terminal and press Enter to execute it:
 
 ```bash
 csrutil disable
 ```
 
-- Once the command has executed, exit the Terminal and reboot. When you log back into macOS, SIP will be disabled.
+- Once  the command has  executed, exit the Terminal  and reboot. When  you log
+  back into macOS, SIP will be disabled.
 
 ## Crash Reporter
 
@@ -57,7 +74,7 @@ defaults write com.apple.CrashReporter DialogType -string 'none'
 defaults write com.apple.CrashReporter UseUNC -bool true
 ```
 
-# Dashboard
+## Dashboard
 
 ### Disable Dashboard
 
@@ -77,7 +94,9 @@ man tmutil
 
 ### Disable Sudden Motion Sensor (SMS) for SSD
 
-Read [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia") ([french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor "Wikipedia")) article to understand SMS.
+Read                 [this](https://en.wikipedia.org/wiki/Sudden_Motion_Sensor)
+([french](https://fr.wikipedia.org/wiki/Sudden_Motion_Sensor))    article    to
+understand SMS.
 
 ```bash
 pmset -a sms 0
@@ -115,7 +134,9 @@ defaults write com.apple.Dock autohide-delay -float 0
 
 ### Automaticaly hide and show the Dock delay (in ms)
 
+```bash
 defaults write com.apple.Dock autohide-time-modifier -float 0
+```
 
 ### Animame opening application (true / false)
 
@@ -141,7 +162,7 @@ defaults write com.apple.Dock minimize-to-application -bool true
 defaults write com.apple.Dock show-process-indicators -bool true
 ```
 
-##  Finder
+## Finder
 
 ```bash
 man chflags
@@ -201,7 +222,7 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 ```bash
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
-````
+```
 
 ### Save to disk instead of iCloud by default
 
@@ -237,13 +258,21 @@ defaults write NSGlobalDomain AppleShowScrollBars -string 'Always'
 
 ## Homebrew
 
-Homepage : http://brew.sh/
+Homepage: [brew.sh](http://brew.sh/)
 
 ```bash
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew upgrade
 brew tap rockyluke/devops
 brew upgrade
+```
+
+## Hostname
+
+```bash
+scutil --set ComputerName <HOSTNAME>
+scutil --set HostName <HOSTNAME>
+scutil --set LocalHostName <HOSTNAME>
 ```
 
 ## Locate
@@ -260,7 +289,9 @@ launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
 
 ## Metadata
 
-Read [this](https://en.wikipedia.org/wiki/.DS_Store "Wikipedia") ([french](https://fr.wikipedia.org/wiki/.DS_Store "Wikipedia")) article to understand .DS_Store.
+Read                            [this](https://en.wikipedia.org/wiki/.DS_Store)
+([french](https://fr.wikipedia.org/wiki/.DS_Store))   article   to   understand
+.DS_Store.
 
 ### Disable the creation of .DS_Store on network volumes
 
@@ -303,13 +334,13 @@ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 ### Change the location of the screenshot
 
 ```bash
-defaults write com.apple.ScreenCapture location ~/Pictures/
+defaults write com.apple.ScreenCapture location -string "${HOME}/Pictures/"
 ```
 
 ### Change the format of the screenshot
 
 ```bash
-defaults write com.apple.ScreenCapture type jpg
+defaults write com.apple.ScreenCapture type -string "jpg"
 ```
 
 ### Disable shadow in screenshot
@@ -362,7 +393,9 @@ mdutil -i on /path/to/volume
 
 ## Ubuntu
 
-This is a very short version of [this](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx "Ubuntu") article.
+This         is         a         very         short         version         of
+[this](http://www.ubuntu.com/download/desktop/create-a-usb-stick-on-mac-osx)
+article.
 
 ```bash
 hdiutil convert -format UDRW -o /path/to/target.img /path/to/ubuntu.iso
@@ -389,9 +422,20 @@ diskutil eject /dev/diskN
 - [www.apple.com/opensource](https://www.apple.com/opensource/)
 
 [license-img]: https://img.shields.io/badge/license-ISC-blue.svg
+[licence-href]: LICENCE
 [build-img]: https://travis-ci.org/rockyluke/osx-cli.svg?branch=master
-[build-url]: https://travis-ci.org/rockyluke/osx-cli
-[10-10-img]: https://img.shields.io/badge/osx-10.10-green.svg
-[10-11-img]: https://img.shields.io/badge/osx-10.11-green.svg
-[10-12-img]: https://img.shields.io/badge/osx-10.12-green.svg
+[build-href]: https://travis-ci.org/rockyluke/osx-cli
+[yosemite-img]: https://img.shields.io/badge/osx-10.10-green.svg
+[yosemite-href]: https://www.apple.com/
+[elcapitan-img]: https://img.shields.io/badge/osx-10.11-green.svg
+[elcapitan-href]: https://www.apple.com/
+[sierra-img]: https://img.shields.io/badge/osx-10.12-green.svg
+[sierra-href]: https://www.apple.com/
+[highsierra-img]: https://img.shields.io/badge/osx-10.13-green.svg
+[highsierra-href]: https://www.apple.com/
+[mojave-img]: https://img.shields.io/badge/osx-10.14-green.svg
+[mojave-href]: https://www.apple.com/
+[catalina-img]: https://img.shields.io/badge/osx-10.15-green.svg
+[catalina-href]: https://www.apple.com/
+[sip-href]: https://en.wikipedia.org/wiki/System_Integrity_Protection
 [dock]: https://github.com/rockyluke/osx-cli/blob/master/images/Dock.png
