@@ -44,7 +44,7 @@ man defaults
 ## System Integrity Protection
 
 For **El  Capitan** (macOS  10.11), **Sierra**  (macOS 10.12),  **High Sierra**
-(macOS 10.13), **Mojave** (macOS 10.14) and **Catalina** (macos 10.15) you need
+(macOS 10.13), **Mojave** (macOS 10.14) and **Catalina** (macOS 10.15) you need
 to  understand  and  disable  [System  Integrity  Protection][sip-href]  before
 continuing this guide.
 
@@ -426,17 +426,17 @@ diskutil eject /dev/diskN
 [licence-href]: LICENCE
 [build-img]: https://travis-ci.org/rockyluke/osx-cli.svg?branch=master
 [build-href]: https://travis-ci.org/rockyluke/osx-cli
-[yosemite-img]: https://img.shields.io/badge/osx-10.10-green.svg
+[yosemite-img]: https://img.shields.io/badge/macOS-10.10-green.svg
 [yosemite-href]: https://www.apple.com/
-[elcapitan-img]: https://img.shields.io/badge/osx-10.11-green.svg
+[elcapitan-img]: https://img.shields.io/badge/macOS-10.11-green.svg
 [elcapitan-href]: https://www.apple.com/
-[sierra-img]: https://img.shields.io/badge/osx-10.12-green.svg
+[sierra-img]: https://img.shields.io/badge/macOS-10.12-green.svg
 [sierra-href]: https://www.apple.com/
-[highsierra-img]: https://img.shields.io/badge/osx-10.13-green.svg
+[highsierra-img]: https://img.shields.io/badge/macOS-10.13-green.svg
 [highsierra-href]: https://www.apple.com/
-[mojave-img]: https://img.shields.io/badge/osx-10.14-green.svg
+[mojave-img]: https://img.shields.io/badge/macOS-10.14-green.svg
 [mojave-href]: https://www.apple.com/
-[catalina-img]: https://img.shields.io/badge/osx-10.15-green.svg
+[catalina-img]: https://img.shields.io/badge/macOS-10.15-green.svg
 [catalina-href]: https://www.apple.com/
 [sip-href]: https://en.wikipedia.org/wiki/System_Integrity_Protection
 [dock]: https://github.com/rockyluke/osx-cli/blob/master/images/Dock.png
