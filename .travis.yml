@@ -3,8 +3,6 @@ sudo: false
 
 addons:
   apt:
-    sources:
-    - debian-sid
     packages:
     - shellcheck
 
