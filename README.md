@@ -43,9 +43,10 @@ man defaults
 
 ## System Integrity Protection
 
-For El Capitan (macOS 10.11), Sierra  (macOS 10.12), High Sierra (macOS 10.13),
-Mojave (10.14)  and Catalina (macos 10.15)  you need to understand  and disable
-[System Integrity Protection][sip-href] before continuing this guide.
+For **El  Capitan** (macOS  10.11), **Sierra**  (macOS 10.12),  **High Sierra**
+(macOS 10.13), **Mojave** (macOS 10.14) and **Catalina** (macos 10.15) you need
+to  understand  and  disable  [System  Integrity  Protection][sip-href]  before
+continuing this guide.
 
 - Power  on your  Mac and hold  down the CMD  + R  keys to access  the Recovery
   Partition.
