@@ -1,4 +1,4 @@
-# osx-cli
+# macos-cli
 
 [![License][license-img]][licence-href]
 [![Build][build-img]][build-href]
@@ -10,7 +10,6 @@
 [![Catalina][catalina-img]][catalina-href]
 
 - [Disclaimer](#disclaimer)
-- [System Integrity Protection](#system-integrity-protection)
 - [Crash Reporter](#crash-reporter)
 - [Dashboard](#dashboard)
 - [Disks](#disks)
@@ -19,6 +18,7 @@
 - [Finder](#finder)
 - [Homebrew](#homebrew)
 - [Hostname](#hostname)
+- [Launchpad](#launchpad)
 - [Locate](#locate)
 - [Metadata](#metadata)
 - [Notifications](#notifications)
@@ -27,6 +27,7 @@
 - [Screen capture](#screen-capture)
 - [Software update](#software-update)
 - [Spotlight](#spotlight)
+- [System Integrity Protection](#system-integrity-protection)
 - [Miscellaneous](#miscellaneous)
 
 ## Disclaimer
@@ -40,26 +41,6 @@ man scutil
 man sudo
 man defaults
 ```
-
-## System Integrity Protection
-
-For **El  Capitan** (macOS  10.11), **Sierra**  (macOS 10.12),  **High Sierra**
-(macOS 10.13), **Mojave** (macOS 10.14) and **Catalina** (macOS 10.15) you need
-to  understand  and  disable  [System  Integrity  Protection][sip-href]  before
-continuing this guide.
-
-- Power  on your  Mac and hold  down the CMD  + R  keys to access  the Recovery
-  Partition.
-- From  the Recovery  Partition, click  Utilities from the  menu bar,  and then
-  select Terminal.
-- Enter the following command into Terminal and press Enter to execute it:
-
-```bash
-csrutil disable
-```
-
-- Once  the command has  executed, exit the Terminal  and reboot. When  you log
-  back into macOS, SIP will be disabled.
 
 ## Crash Reporter
 
@@ -276,6 +257,15 @@ scutil --set HostName <HOSTNAME>
 scutil --set LocalHostName <HOSTNAME>
 ```
 
+## Launchpad
+
+### Reset to default order
+
+```bash
+defaults write com.apple.dock ResetLaunchPad -bool true
+killall Dock
+```
+
 ## Locate
 
 ```bash
@@ -380,6 +370,12 @@ defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 man mdutil
 ```
 
+### Rebuild database
+
+```bash
+mdutil -E /path/to/volume
+```
+
 ### Disable indexing of a volume
 
 ```bash
@@ -391,6 +387,24 @@ mdutil -i off /path/to/volume
 ```bash
 mdutil -i on /path/to/volume
 ```
+
+## System Integrity Protection
+
+You  need   to  understand   [System  Integrity   Protection][sip-href]  before
+continuing this section.
+
+- Power  on your  Mac and hold  down the CMD  + R  keys to access  the Recovery
+  Partition.
+- From  the Recovery  Partition, click  Utilities from the  menu bar,  and then
+  select Terminal.
+- Enter the following command into Terminal and press Enter to execute it:
+
+```bash
+csrutil disable
+```
+
+- Once  the command has  executed, exit the Terminal  and reboot. When  you log
+  back into macOS, SIP will be disabled.
 
 ## Ubuntu
 
