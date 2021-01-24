@@ -1,34 +1,25 @@
-# macos-cli
+# macos-tips
 
-[![License][license-img]][licence-href]
-[![Build][build-img]][build-href]
-[![Yosemite][yosemite-img]][yosemite-href]
-[![El Capitan][elcapitan-img]][elcapitan-href]
-[![Sierra][sierra-img]][sierra-href]
-[![High Sierra][highsierra-img]][highsierra-href]
-[![Mojave][mojave-img]][mojave-href]
-[![Catalina][catalina-img]][catalina-href]
-
-- [Disclaimer](#disclaimer)
-- [Crash Reporter](#crash-reporter)
-- [Dashboard](#dashboard)
-- [Disks](#disks)
-- [DNS](#dns)
-- [Dock](#dock)
-- [Finder](#finder)
-- [Homebrew](#homebrew)
-- [Hostname](#hostname)
-- [Launchpad](#launchpad)
-- [Locate](#locate)
-- [Metadata](#metadata)
-- [Notifications](#notifications)
-- [Photos](#photos)
-- [Preview](#preview)
-- [Screen capture](#screen-capture)
-- [Software update](#software-update)
-- [Spotlight](#spotlight)
-- [System Integrity Protection](#system-integrity-protection)
-- [Miscellaneous](#miscellaneous)
+1. [Disclaimer](#disclaimer)
+1. [Crash Reporter](#crash-reporter)
+1. [Dashboard](#dashboard)
+1. [Disks](#disks)
+1. [DNS](#dns)
+1. [Dock](#dock)
+1. [Finder](#finder)
+1. [Homebrew](#homebrew)
+1. [Hostname](#hostname)
+1. [Launchpad](#launchpad)
+1. [Locate](#locate)
+1. [Metadata](#metadata)
+1. [Notifications](#notifications)
+1. [Photos](#photos)
+1. [Preview](#preview)
+1. [Screen capture](#screen-capture)
+1. [Software update](#software-update)
+1. [Spotlight](#spotlight)
+1. [System Integrity Protection](#system-integrity-protection)
+1. [Miscellaneous](#miscellaneous)
 
 ## Disclaimer
 
@@ -436,21 +427,4 @@ diskutil eject /dev/diskN
 - [github.com/apple](https://github.com/apple)
 - [www.apple.com/opensource](https://www.apple.com/opensource/)
 
-[license-img]: https://img.shields.io/badge/license-ISC-blue.svg
-[licence-href]: LICENCE
-[build-img]: https://travis-ci.org/rockyluke/osx-cli.svg?branch=master
-[build-href]: https://travis-ci.org/rockyluke/osx-cli
-[yosemite-img]: https://img.shields.io/badge/macOS-10.10-green.svg
-[yosemite-href]: https://www.apple.com/
-[elcapitan-img]: https://img.shields.io/badge/macOS-10.11-green.svg
-[elcapitan-href]: https://www.apple.com/
-[sierra-img]: https://img.shields.io/badge/macOS-10.12-green.svg
-[sierra-href]: https://www.apple.com/
-[highsierra-img]: https://img.shields.io/badge/macOS-10.13-green.svg
-[highsierra-href]: https://www.apple.com/
-[mojave-img]: https://img.shields.io/badge/macOS-10.14-green.svg
-[mojave-href]: https://www.apple.com/
-[catalina-img]: https://img.shields.io/badge/macOS-10.15-green.svg
-[catalina-href]: https://www.apple.com/
-[sip-href]: https://en.wikipedia.org/wiki/System_Integrity_Protection
 [dock]: https://github.com/rockyluke/osx-cli/blob/master/images/Dock.png
