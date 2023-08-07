@@ -315,14 +315,30 @@ defaults write com.apple.Preview NSQuitAlwaysKeepsWindows -bool false
 
 ### Change the location of the screenshot
 
+#### macOS 10
+
 ```bash
-defaults write com.apple.ScreenCapture location -string "${HOME}/Pictures/"
+defaults write com.apple.ScreenCapture location -string "${HOME}/Documents/Screenshots"
 ```
+
+#### macOS 11+
+
+```bash
+defaults write com.apple.screencapture location ${HOME}/Documents/Screenshots
+``` 
 
 ### Change the format of the screenshot
 
+#### macOS 10
+
 ```bash
 defaults write com.apple.ScreenCapture type -string "jpg"
+```
+
+#### macOS 11+
+
+```bash
+defaults write com.apple.ScreenCapture type png
 ```
 
 ### Disable shadow in screenshot
