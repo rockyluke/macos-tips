@@ -443,4 +443,4 @@ diskutil eject /dev/diskN
 - [github.com/apple](https://github.com/apple)
 - [www.apple.com/opensource](https://www.apple.com/opensource/)
 
-[dock]: https://github.com/rockyluke/osx-cli/blob/master/images/Dock.png
+[dock]: images/Dock.png
